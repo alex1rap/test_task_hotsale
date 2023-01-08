@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89f76492-bb31-4310-b670-2394a57cd141" name="Changes" comment="Add monolog; Add users; Add validation.">
-      <change afterPath="$PROJECT_DIR$/src/EventSubscriber/ExceptionSubscriber.php" afterDir="false" />
+    <list default="true" id="89f76492-bb31-4310-b670-2394a57cd141" name="Changes" comment="Add exception if user already registered">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/RegistrationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/RegistrationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/Users.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/UsersListService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dataset/RegistrationDataset.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dataset/RegistrationDataset.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EventSubscriber/ExceptionSubscriber.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventSubscriber/ExceptionSubscriber.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +144,7 @@
       <option name="presentableId" value="Default" />
       <updated>1672777243449</updated>
       <workItem from="1672777244705" duration="2658000" />
-      <workItem from="1673194746550" duration="9397000" />
+      <workItem from="1673194746550" duration="10690000" />
     </task>
     <task id="LOCAL-00001" summary="Git init">
       <created>1672780111469</created>
@@ -231,7 +230,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673204090643</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Add exception if user already registered">
+      <created>1673205253171</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1673205253171</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -252,6 +258,7 @@
     <MESSAGE value="Git init" />
     <MESSAGE value="Add registration form" />
     <MESSAGE value="Add monolog; Add users; Add validation." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add monolog; Add users; Add validation." />
+    <MESSAGE value="Add exception if user already registered" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add exception if user already registered" />
   </component>
 </project>

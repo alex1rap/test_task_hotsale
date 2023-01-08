@@ -13,7 +13,7 @@ class RegistrationDataset implements DatasetInterface
     /**
      * @var string
      *
-     * @Assert\NotBlank()
+     * @Assert\NotBlank(message="Name cannot be empty")
      *
      * @Groups({"safe"})
      */
@@ -22,8 +22,6 @@ class RegistrationDataset implements DatasetInterface
     /**
      * @var string
      *
-     * @Assert\NotBlank()
-     *
      * @Groups({"safe"})
      */
     public $lastName;
@@ -31,7 +29,7 @@ class RegistrationDataset implements DatasetInterface
     /**
      * @var string
      *
-     * @Assert\NotBlank()
+     * @Assert\NotBlank("Email cannot be empty")
      * @Assert\Email()
      *
      * @Groups({"safe"})
@@ -41,7 +39,7 @@ class RegistrationDataset implements DatasetInterface
     /**
      * @var string
      *
-     * @Assert\NotBlank()
+     * @Assert\NotBlank(message="Password cannot be empty")
      * @Assert\Length(min=8, max=32)
      * @Password()
      *
@@ -51,9 +49,7 @@ class RegistrationDataset implements DatasetInterface
     /**
      * @var string
      *
-     * @Assert\NotBlank()
-     *
-     * @Assert\EqualTo(propertyPath="password")
+     * @Assert\EqualTo(propertyPath="password", message="Password confirmation should be equal to password")
      */
     public $confirmation;
 }

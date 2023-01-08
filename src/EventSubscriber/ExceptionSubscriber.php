@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\EventSubscriber;
 
+use App\Exception\NotValidatedHttpException;
 use Exception;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
@@ -68,13 +69,24 @@ class ExceptionSubscriber implements EventSubscriberInterface
             'message' => JsonResponse::$statusTexts[JsonResponse::HTTP_INTERNAL_SERVER_ERROR],
         ];
 
+        if ($e instanceof NotValidatedHttpException) {
+            $errors = $e->getErrors();
+            $error['code'] = JsonResponse::HTTP_UNPROCESSABLE_ENTITY;
+            $error['errors'] = $errors;
+            unset($error['message']);
+            $this->logger->warning(json_encode($errors));
+            return $error;
+        }
+
         if ($e instanceof HttpException) {
             $error['code'] = $e->getStatusCode();
             $error['message'] = $e->getMessage();
+            $this->logger->warning($error['message']);
         }
 
         if (getenv('APP_ENV') !== 'prod') {
             $error['message'] = $e->getMessage();
+            $this->logger->warning($error['message']);
         }
 
         $this->logger->warning($error['message']);
