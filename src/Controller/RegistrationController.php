@@ -7,6 +7,7 @@ use App\Service\UsersListService;
 use InvalidArgumentException;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpKernel\Exception\UnprocessableEntityHttpException;
 use Symfony\Component\Routing\Annotation\Route;
 
 class RegistrationController extends JsonController
@@ -26,7 +27,7 @@ class RegistrationController extends JsonController
             'User %s was successfully validated.', $this->serialize($registration)
         ));
         if ($service->find($registration->email)) {
-            throw new InvalidArgumentException(sprintf(
+            throw new UnprocessableEntityHttpException(sprintf(
                 'User with email "%s" already registered', $registration->email
             ));
         }
