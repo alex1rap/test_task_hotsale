@@ -4,31 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89f76492-bb31-4310-b670-2394a57cd141" name="Changes" comment="Add registration form">
-      <change afterPath="$PROJECT_DIR$/config/packages/monolog.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/translation.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/twig.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/validator.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Dataset/DatasetInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Dataset/RegistrationDataset.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exception/NotValidatedHttpException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Service/Users.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Validator/Password.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Validator/PasswordValidator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="89f76492-bb31-4310-b670-2394a57cd141" name="Changes" comment="Add monolog; Add users; Add validation.">
+      <change afterPath="$PROJECT_DIR$/src/EventSubscriber/ExceptionSubscriber.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/lexik_jwt_authentication.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/JsonController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/JsonController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/RegistrationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/RegistrationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/Users.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/UsersListService.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +145,7 @@
       <option name="presentableId" value="Default" />
       <updated>1672777243449</updated>
       <workItem from="1672777244705" duration="2658000" />
-      <workItem from="1673194746550" duration="8235000" />
+      <workItem from="1673194746550" duration="9397000" />
     </task>
     <task id="LOCAL-00001" summary="Git init">
       <created>1672780111469</created>
@@ -244,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673194552306</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Add monolog; Add users; Add validation.">
+      <created>1673204090643</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1673204090643</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -264,6 +251,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Git init" />
     <MESSAGE value="Add registration form" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add registration form" />
+    <MESSAGE value="Add monolog; Add users; Add validation." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add monolog; Add users; Add validation." />
   </component>
 </project>

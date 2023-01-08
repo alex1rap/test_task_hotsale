@@ -2,8 +2,12 @@
 
 namespace App\Service;
 
-class Users
+class UsersListService
 {
+
+    /**
+     * @var array{ id: int, email: string, name: string, lastName: string }[]
+     */
     private $users = [
         [
             'id' => 1,
@@ -30,4 +34,18 @@ class Users
             'lastName' => 'User'
         ],
     ];
+
+    /**
+     * @param string $email
+     * @return bool
+     */
+    public function find(string $email): bool
+    {
+        foreach ($this->users as $user) {
+            if ($user['email'] === $email) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
